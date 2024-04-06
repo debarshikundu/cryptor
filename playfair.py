@@ -38,7 +38,7 @@ def playfair_encrypt(plaintext, keyword):
     i = 0
     while i < len(plaintext):
         if i == len(plaintext) - 1 or plaintext[i] == plaintext[i + 1]:
-            plaintext_pairs.append(plaintext[i] + 'X')
+            plaintext_pairs.append(plaintext[i] + '>')
             i += 1
         else:
             plaintext_pairs.append(plaintext[i] + plaintext[i + 1])
@@ -85,6 +85,8 @@ def playfair_decrypt(ciphertext, keyword):
                 else:  # Forming a rectangle
                     plaintext += matrix[row1][col2] + matrix[row2][col1]
             else:
+                if first.isalpha() and second == '>':
+                    pair = first
                 plaintext += pair  # Keep non-alphabetic characters as is
         else:
             plaintext += pair  # Append the last character if it's single
