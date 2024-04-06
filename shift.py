@@ -23,3 +23,13 @@ def decrypt(encryptedT, key):
         else:
             text += alphabet[alphabet.index(encryptedT[i])-key-26]
     return text
+
+# Example usage:
+plaintext = "HELLO WORLD"
+keyword = "KEY"
+
+encrypted_text = encrypt(plaintext, key)
+print("Encrypted text:", encrypted_text)
+
+decrypted_text = decrypt(encrypted_text, key)
+print("Decrypted text:", decrypted_text)
