@@ -92,14 +92,3 @@ def playfair_decrypt(ciphertext, keyword):
             plaintext += pair  # Append the last character if it's single
 
     return plaintext
-
-
-# Example usage:
-plaintext = "HELLO WORLD"
-keyword = "KEYWORD"
-
-encrypted_text = playfair_encrypt(plaintext, keyword)
-print("Encrypted text:", encrypted_text)
-
-decrypted_text = playfair_decrypt(encrypted_text, keyword)
-print("Decrypted text:", decrypted_text)

@@ -39,13 +39,3 @@ def vigenere_decrypt(ciphertext, keyword):
             plaintext += ciphertext[i]
     
     return plaintext
-
-# Example usage:
-plaintext = "HELLO WORLD"
-keyword = "KEY"
-
-encrypted_text = vigenere_encrypt(plaintext, keyword)
-print("Encrypted text:", encrypted_text)
-
-decrypted_text = vigenere_decrypt(encrypted_text, keyword)
-print("Decrypted text:", decrypted_text)

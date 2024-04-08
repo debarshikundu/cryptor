@@ -18,11 +18,15 @@ def main():
         if choice == "1":
             # Call Vigenère cipher functions for encryption/decryption
             # Get user inputs (plaintext, keyword) and call vigenere_cipher.encrypt() or vigenere_cipher.decrypt()
-
+            cipher = vigenere.vigenere_encrypt("Hello World!", "key")
+            plain = vigenere.vigenere_decrypt(cipher, "key")
+            print(cipher)
+            print(plain)
         elif choice == "2":
             # Call Playfair cipher functions for encryption/decryption
             # Get user inputs (plaintext, keyword) and call playfair_cipher.encrypt() or playfair_cipher.decrypt()
-            
+            cipher = playfair.playfair_encrypt("Hello World", "keyword")
+            plain = playfair.playfair_decrypt(cipher, "keyword")
         # Add more elif blocks for other ciphers
         
         elif choice == "0":
